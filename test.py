@@ -2,11 +2,8 @@ import requests
 
 BASE = "http://127.0.0.1:5000/"
 
-response = requests.put(BASE + "video/1", {"name": "day at zoo"})
+response = requests.get(BASE + "video/1")
 print(response.json())
 input()
-response = requests.get(BASE + "video/6")
+response = requests.patch(BASE + "video/1", {"views": 100})
 print(response.json())
-input()
-response = requests.delete(BASE + "video/1")
-print(response)
